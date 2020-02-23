@@ -17,3 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('book', 'BooksController@index'); // display book list
+//register
+Route::post('/booksadd','BooksController@register');
+//add
+Route::get('/booksadd','BooksController@add');
