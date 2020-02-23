@@ -23,3 +23,7 @@ Route::post('/booksadd','BooksController@register');
 Route::get('/booksadd','BooksController@add');
 //delete
 Route::delete('/book/{book}','BooksController@destroy');
+//edit
+Route::get('/booksedit/{book}', 'BooksController@edit');
+//update
+Route::post('/bookupdate', 'BooksController@update');
