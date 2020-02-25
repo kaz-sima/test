@@ -40,7 +40,9 @@ Route::prefix('admin')->namespace('Admin')->as('admin.')->group(function(){
      });
 });
         
-Auth::routes();
+// enabling the mail verification
+Auth::routes(['verify' => true]);
+    
 Route::get('/home', 'HomeController@index')->name('user.top');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
    
