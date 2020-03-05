@@ -1,6 +1,6 @@
 # ictti_example
-# 2.8.1	About development process and project management	5
-# 2.8.2	MVC architecture	8
+- 2.8.1	About development process and project management	5
+- 2.8.2	MVC architecture	8
 2.8.3	Preparation of development environment	13
 2.8.4	Development of the book management system with Laravel	22
 2.8.5	Development of a use case, “View books”	23
