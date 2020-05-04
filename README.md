@@ -1,5 +1,5 @@
 # ictti_example
-2.8.1	About development process and project management	3
+* 2.8.1	About development process and project management	3
 2.8.2	MVC architecture	6
 2.8.3	Preparation of development environment	11
 2.8.4	Development of the book management system with Laravel	20
