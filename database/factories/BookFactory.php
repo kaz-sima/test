@@ -1,10 +1,6 @@
 <?php
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-use App\Book;
-use Illuminate\Support\Str;
-use Faker\Generator as Faker;
-
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -16,14 +12,22 @@ use Faker\Generator as Faker;
 |
 */
 
-$define = $factory->define(Book::class, function (Faker $faker) {
+use App\Book;
+use Faker\Generator as Faker;
+
+$factory->define(Book::class, function (Faker $faker) {
+
     static $seed = 0;
     $faker->seed($seed++);
     
     return [
+        'book_img' => '',
         'book_title' => $faker-> catchPhrase,
         'author'=>$faker->name,
         'publisher'=>$faker->company,
-        'published'=>$faker->datetime($max='now')
+        'published'=>$faker->datetime($max='now'),
+        'lendingstatus'=>$faker->numberBetween(1,1), // add
+        'ctgry_id'=>$faker->numberBetween(1,4),
+        'subctgry_id'=>$faker->numberBetween(1,10),
     ];
 });

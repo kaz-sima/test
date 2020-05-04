@@ -17,7 +17,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $guarded = array('id');
     protected $fillable = [
-        'name', 'gender', 'nrc', 'email', 'password', 'phone', 'address'
+        'name', 'gender', 'nrc', 'email', 'password', 'phone', 'address', 'provider','provider_id'
     ];
 
     /**
@@ -38,4 +38,13 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function loans()
+    {
+        return $this->hasMany('App\Loan');
+    }
+    public function resevations()
+    {
+        return $this->hasMany('App\Reservation');
+    }
+    
 }
